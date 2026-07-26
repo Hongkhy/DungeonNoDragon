@@ -12,17 +12,17 @@ enum State {
 
 @export var max_hp: int = 1000
 
-@export var speed_phase1: float = 45.0
-@export var speed_phase2: float = 60.0
+@export var speed_phase1: float = 25.0
+@export var speed_phase2: float = 40.0
 
-@export var melee_range: float = 38.0
+@export var melee_range: float = 30.0
 @export var fireball_range: float = 180.0
 
 @export var melee_damage: int = 20
 @export var fireball_damage: int = 15
 
-@export var melee_windup_time: float = 0.25
-@export var melee_recover_time: float = 0.50
+@export var melee_windup_time: float = 0.5
+@export var melee_recover_time: float = 1
 
 @export var fireball_windup_time: float = 0.35
 @export var fireball_recover_time: float = 1.00
@@ -110,9 +110,9 @@ func _physics_process(delta: float) -> void:
 		start_phase2()
 		return
 
-	if distance <= melee_range:
+	if distance <= melee_range and can_melee:
 		_set_state(State.MELEE_ATTACK)
-	elif phase == 2 and can_fireball and distance <= fireball_range:
+	elif phase == 2 and distance <= fireball_range and can_fireball:
 		_set_state(State.FIREBALL_ATTACK)
 	else:
 		_set_state(State.CHASE)
@@ -176,53 +176,66 @@ func _chase_player() -> void:
 
 
 func _start_melee_attack() -> void:
-	var cooldown = melee_cooldown_phase1
-	attack_in_progress = false
+	attack_in_progress = true
 	can_melee = false
 
+	var cooldown = melee_cooldown_phase1
 	if phase == 2:
 		cooldown = melee_cooldown_phase2
 
-	await get_tree().create_timer(cooldown).timeout
-	can_melee = true
-	
+	# Stop before attacking
 	velocity = Vector2.ZERO
 	move_and_slide()
 
+	# Face the player
+	if player:
+		var dir = (player.global_position - global_position).normalized()
+		_update_facing(dir)
+
+	# Play attack animation
 	_play_attack_animation()
 
+	# Wind-up
 	await get_tree().create_timer(melee_windup_time).timeout
 
 	if dead:
 		return
 
+	# Play attack sound
 	if melee_sound and melee_sound.stream:
 		melee_sound.play()
 
-	if player != null:
-		var dist := global_position.distance_to(player.global_position)
-		if dist <= melee_range + 8.0:
+	# Deal damage
+	if player:
+		if global_position.distance_to(player.global_position) <= melee_range + 8.0:
 			if player.has_method("take_damage"):
 				player.take_damage(melee_damage)
 
+	# Recovery
 	await get_tree().create_timer(melee_recover_time).timeout
 
 	attack_in_progress = false
 
-	if not dead:
+	# Cooldown after the attack
+	await get_tree().create_timer(cooldown).timeout
+
+	can_melee = true
+
+	if !dead:
 		_set_state(State.CHASE)
 
 
 func _start_fireball_attack() -> void:
-	attack_in_progress = false
+	attack_in_progress = true
+	can_fireball = false
 
-	await get_tree().create_timer(fireball_cooldown).timeout
-	can_fireball = true
 	velocity = Vector2.ZERO
 	move_and_slide()
-	if player != null:
+
+	if player:
 		var dir = (player.global_position - global_position).normalized()
 		_update_facing(dir)
+
 	_play_shoot_animation()
 
 	await get_tree().create_timer(fireball_windup_time).timeout
@@ -230,12 +243,12 @@ func _start_fireball_attack() -> void:
 	if dead:
 		return
 
-	if range_sound1.stream:
+	if range_sound1 and range_sound1.stream:
 		range_sound1.play()
 
-	await get_tree().create_timer(0.50).timeout
+	await get_tree().create_timer(0.5).timeout
 
-	if fireball_scene != null and player != null:
+	if fireball_scene and player:
 		var fireball = fireball_scene.instantiate()
 		get_tree().current_scene.add_child(fireball)
 
@@ -249,15 +262,18 @@ func _start_fireball_attack() -> void:
 			fireball.direction = dir
 			fireball.damage = fireball_damage
 
-	if range_sound2.stream:
+	if range_sound2 and range_sound2.stream:
 		range_sound2.play()
 
 	await get_tree().create_timer(fireball_recover_time).timeout
 
 	attack_in_progress = false
+
+	await get_tree().create_timer(fireball_cooldown).timeout
+
 	can_fireball = true
 
-	if not dead:
+	if !dead:
 		_set_state(State.CHASE)
 
 
@@ -333,8 +349,22 @@ func _on_detection_body_exited(body: Node) -> void:
 	if body == player:
 		player = null
 
+func update_attack_area():
+	match facing:
+		Vector2.UP:
+			attack_area.position = Vector2(0, -32)
 
-func _update_facing(dir: Vector2) -> void:
+		Vector2.DOWN:
+			attack_area.position = Vector2(0, 32)
+
+		Vector2.LEFT:
+			attack_area.position = Vector2(-32, 0)
+
+		Vector2.RIGHT:
+			attack_area.position = Vector2(32, 0)
+
+
+func _update_facing(dir: Vector2):
 	if abs(dir.x) > abs(dir.y):
 		facing = Vector2.RIGHT if dir.x >= 0 else Vector2.LEFT
 	elif dir.y < 0:
@@ -342,6 +372,7 @@ func _update_facing(dir: Vector2) -> void:
 	else:
 		facing = Vector2.DOWN
 
+	update_attack_area()
 
 func _play_movement_animation(dir: Vector2) -> void:
 	if abs(dir.x) > abs(dir.y):

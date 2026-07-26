@@ -348,26 +348,26 @@ func spawn_mobs():
 	match current_floor:
 
 		1:
-			mob_count = 10
+			mob_count = 1
 			mob_scenes = [
 				mob1_scene
 			]
 
 		2:
-			mob_count = 15
+			mob_count = 1
 			mob_scenes = [
 				mob1_scene,
 				vampire_scene
 			]
 
 		3:
-			mob_count = 20
+			mob_count = 2
 			mob_scenes = [
 				vampire_scene
 			]
 
 		4:
-			mob_count = 25
+			mob_count = 2
 			mob_scenes = [
 				vampire_scene
 			]

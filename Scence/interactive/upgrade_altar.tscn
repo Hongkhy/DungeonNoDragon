@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bfy8rg2dm5qro"]
+
+[ext_resource type="Script" uid="uid://l4e35tg7786y" path="res://Scence/interactive/upgrade_altar.gd" id="1_1pkc7"]
+[ext_resource type="Texture2D" uid="uid://bs2jw5sfa0a7v" path="res://Asset/Something/Characters/Char_002_Idle.png" id="1_jvu18"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hofjr"]
+radius = 21.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pkc7"]
+atlas = ExtResource("1_jvu18")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hofjr"]
+atlas = ExtResource("1_jvu18")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6qjt"]
+atlas = ExtResource("1_jvu18")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_734xx"]
+atlas = ExtResource("1_jvu18")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k166k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pkc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hofjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6qjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_734xx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UpgradeAltar" type="Area2D" unique_id=44748785]
+script = ExtResource("1_1pkc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1420993713]
+shape = SubResource("CircleShape2D_hofjr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1357244788]
+sprite_frames = SubResource("SpriteFrames_k166k")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="." unique_id=1107622562]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

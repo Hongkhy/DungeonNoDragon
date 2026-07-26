@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://maa2ga4hx13d"]
 
-[ext_resource type="Texture2D" uid="uid://di5q6krj0pxkg" path="res://Scence/Mobs/Groudon/asset/Attack-Anim.png" id="1_b0j5a"]
-[ext_resource type="Script" uid="uid://cooxfc2xudnfy" path="res://Scence/Mobs/Groudon/groudon.gd" id="1_cbm84"]
-[ext_resource type="Texture2D" uid="uid://c0ryc3dxsr27p" path="res://Scence/Mobs/Groudon/asset/Idle-Anim.png" id="2_g3xk7"]
-[ext_resource type="PackedScene" uid="uid://tnqrw5bnne4p" path="res://Scence/Attack/fireball/fireball.tscn" id="2_qwhpr"]
-[ext_resource type="Texture2D" uid="uid://2ri7oi86js20" path="res://Scence/Mobs/Groudon/asset/Walk-Anim.png" id="3_e34qt"]
-[ext_resource type="Texture2D" uid="uid://btld714ygsymy" path="res://Scence/Mobs/Groudon/asset/Shoot-Anim.png" id="4_qwhpr"]
-[ext_resource type="AudioStream" uid="uid://bagnnm7srdcb8" path="res://Scence/Mobs/Groudon/sound/godzilla-2014-roar.mp3" id="7_q5nc3"]
-[ext_resource type="AudioStream" uid="uid://bnwv8fbg27keg" path="res://Scence/Mobs/Groudon/sound/dk-stomp-hurt.mp3" id="8_jo7y7"]
-[ext_resource type="AudioStream" uid="uid://b76ng4ahqakdc" path="res://Scence/Mobs/Groudon/sound/ive-got-this.mp3" id="9_07pax"]
-[ext_resource type="AudioStream" uid="uid://bfh2s70sk3oeq" path="res://Scence/Mobs/Groudon/sound/pew-pew-lame-sound-effect.mp3" id="10_q5no3"]
-[ext_resource type="AudioStream" uid="uid://j2n4088xnxro" path="res://Scence/Mobs/Groudon/sound/screaming-scout.mp3" id="11_3bb61"]
+[ext_resource type="Texture2D" uid="uid://di5q6krj0pxkg" path="res://Scence/mobs/Groudon/asset/Attack-Anim.png" id="1_b0j5a"]
+[ext_resource type="Script" uid="uid://cooxfc2xudnfy" path="res://Scence/mobs/Groudon/groudon.gd" id="1_cbm84"]
+[ext_resource type="Texture2D" uid="uid://c0ryc3dxsr27p" path="res://Scence/mobs/Groudon/asset/Idle-Anim.png" id="2_g3xk7"]
+[ext_resource type="PackedScene" uid="uid://tnqrw5bnne4p" path="res://Scence/attack/fireball/fireball.tscn" id="2_qwhpr"]
+[ext_resource type="Texture2D" uid="uid://2ri7oi86js20" path="res://Scence/mobs/Groudon/asset/Walk-Anim.png" id="3_e34qt"]
+[ext_resource type="Texture2D" uid="uid://btld714ygsymy" path="res://Scence/mobs/Groudon/asset/Shoot-Anim.png" id="4_qwhpr"]
+[ext_resource type="AudioStream" uid="uid://bagnnm7srdcb8" path="res://Scence/mobs/Groudon/sound/godzilla-2014-roar.mp3" id="7_q5nc3"]
+[ext_resource type="AudioStream" uid="uid://bnwv8fbg27keg" path="res://Scence/mobs/Groudon/sound/dk-stomp-hurt.mp3" id="8_jo7y7"]
+[ext_resource type="AudioStream" uid="uid://b76ng4ahqakdc" path="res://Scence/mobs/Groudon/sound/ive-got-this.mp3" id="9_07pax"]
+[ext_resource type="AudioStream" uid="uid://bfh2s70sk3oeq" path="res://Scence/mobs/Groudon/sound/pew-pew-lame-sound-effect.mp3" id="10_q5no3"]
+[ext_resource type="AudioStream" uid="uid://j2n4088xnxro" path="res://Scence/mobs/Groudon/sound/screaming-scout.mp3" id="11_3bb61"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4lp0"]
 atlas = ExtResource("1_b0j5a")
@@ -321,7 +321,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lbnib")
 }],
-"loop": 1,
+"loop": true,
 "name": &"attack_down",
 "speed": 4.0
 }, {
@@ -347,7 +347,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g5qty")
 }],
-"loop": 1,
+"loop": true,
 "name": &"attack_right",
 "speed": 5.0
 }, {
@@ -370,7 +370,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kas2n")
 }],
-"loop": 1,
+"loop": true,
 "name": &"attack_up",
 "speed": 5.0
 }, {
@@ -384,7 +384,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3u4kf")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle",
 "speed": 1.0
 }, {
@@ -416,7 +416,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3bb61")
 }],
-"loop": 1,
+"loop": true,
 "name": &"shoot_down",
 "speed": 5.0
 }, {
@@ -448,7 +448,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2bcxp")
 }],
-"loop": 1,
+"loop": true,
 "name": &"shoot_right",
 "speed": 5.0
 }, {
@@ -489,7 +489,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_276o8")
 }],
-"loop": 1,
+"loop": true,
 "name": &"shoot_up",
 "speed": 5.0
 }, {
@@ -506,7 +506,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k1k77")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -523,7 +523,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_75cw1")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk_right",
 "speed": 5.0
 }, {
@@ -540,7 +540,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mujh7")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk_side_down",
 "speed": 5.0
 }, {
@@ -557,7 +557,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oc5tg")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk_side_up",
 "speed": 5.0
 }, {
@@ -574,7 +574,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fp5jg")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk_up",
 "speed": 5.0
 }]
@@ -601,7 +601,6 @@ animation = &"shoot_down"
 frame_progress = 0.3341631
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1259215028]
-visible = false
 position = Vector2(-1, -11)
 shape = SubResource("CapsuleShape2D_prcei")
 
@@ -615,7 +614,6 @@ debug_color = Color(0.96862745, 0, 0, 0.41960785)
 [node name="Detection" type="Area2D" parent="." unique_id=1609188053]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection" unique_id=1376095247]
-visible = false
 shape = SubResource("CircleShape2D_kdqoe")
 debug_color = Color(0.9529412, 0.20392157, 1, 0.41960785)
 

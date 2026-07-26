@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bi5ht1rfs2vy6"]
 
-[ext_resource type="Script" uid="uid://cfmgno6oj0noe" path="res://Scence/Mobs/Vampier/vampire.gd" id="1_hm1g4"]
-[ext_resource type="PackedScene" uid="uid://borf5ienrsj0i" path="res://Scence/Attack/will o wisp/wisp.tscn" id="2_qms7y"]
-[ext_resource type="Texture2D" uid="uid://cud43378cv2q4" path="res://Scence/Mobs/Vampier/asset/enemies-vampire_attack.png" id="3_xjr52"]
-[ext_resource type="Texture2D" uid="uid://dpp4llqme6aij" path="res://Scence/Mobs/Vampier/asset/enemies-vampire_idle.png" id="4_21beq"]
-[ext_resource type="Texture2D" uid="uid://bnt1iqn16d3q" path="res://Scence/Mobs/Vampier/asset/enemies-vampire_movement.png" id="5_nq8c6"]
-[ext_resource type="AudioStream" uid="uid://dr8f22pufhp4b" path="res://Scence/Mobs/Vampier/sound/short-hawk-tuah.mp3" id="6_vxl60"]
-[ext_resource type="AudioStream" uid="uid://b5idxdwdtsmvc" path="res://Scence/Mobs/Vampier/sound/092-gastly.mp3" id="7_fhl6u"]
-[ext_resource type="AudioStream" uid="uid://dku8rb66wbrem" path="res://Scence/Mobs/Vampier/sound/slap-ahhhh.mp3" id="8_xjr52"]
+[ext_resource type="Script" uid="uid://cfmgno6oj0noe" path="res://Scence/mobs/Vampier/vampire.gd" id="1_hm1g4"]
+[ext_resource type="PackedScene" uid="uid://borf5ienrsj0i" path="res://Scence/attack/will o wisp/wisp.tscn" id="2_qms7y"]
+[ext_resource type="Texture2D" uid="uid://cud43378cv2q4" path="res://Scence/mobs/Vampier/asset/enemies-vampire_attack.png" id="3_xjr52"]
+[ext_resource type="Texture2D" uid="uid://dpp4llqme6aij" path="res://Scence/mobs/Vampier/asset/enemies-vampire_idle.png" id="4_21beq"]
+[ext_resource type="Texture2D" uid="uid://bnt1iqn16d3q" path="res://Scence/mobs/Vampier/asset/enemies-vampire_movement.png" id="5_nq8c6"]
+[ext_resource type="AudioStream" uid="uid://dr8f22pufhp4b" path="res://Scence/mobs/Vampier/sound/short-hawk-tuah.mp3" id="6_vxl60"]
+[ext_resource type="AudioStream" uid="uid://b5idxdwdtsmvc" path="res://Scence/mobs/Vampier/sound/092-gastly.mp3" id="7_fhl6u"]
+[ext_resource type="AudioStream" uid="uid://dku8rb66wbrem" path="res://Scence/mobs/Vampier/sound/slap-ahhhh.mp3" id="8_xjr52"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u4aow"]
 atlas = ExtResource("3_xjr52")
@@ -190,7 +190,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y350y")
 }],
-"loop": 0,
+"loop": false,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -213,7 +213,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jly76")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_left_right",
 "speed": 5.0
 }, {
@@ -260,7 +260,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qeqb2")
 }],
-"loop": 0,
+"loop": false,
 "name": &"walk",
 "speed": 5.0
 }]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal health_changed(current_health, max_health)
 
 @export var speed := 120.0
-@export var max_health := 10000
+@export var max_health := 100
 @export var damage := 100
 
 var health := max_health
@@ -25,9 +25,19 @@ var facing_name = "down"
 
 
 func _ready():
+	apply_upgrades()
 
-	emit_signal("health_changed", health, max_health)
-	Bag.use_hp_potion.connect(_on_use_hp_potion)
+func apply_upgrades():
+	var old_max = max_health
+
+	max_health = 100 + (Inventory.hp_level * 20)
+	damage = 100 + (Inventory.damage_level * 10)
+	speed = 120 + (Inventory.speed_level * 5)
+
+	health += max_health - old_max
+	health_changed.emit(health, max_health)
+
+
 	
 func _on_use_hp_potion():
 	heal(50)
@@ -131,32 +141,39 @@ func update_attack_area():
 
 func attack():
 
-	print("Facing:", facing_name)
-	print("AttackArea:", $AttackArea.position)
-	update_attack_area()
+	if is_attacking:
+		return
 
-	$AttackArea.monitoring = true
+	update_attack_area()
 
 	is_attacking = true
 	velocity = Vector2.ZERO
 
 	if abs(facing_direction.x) > abs(facing_direction.y):
-
 		if facing_direction.x > 0:
 			sprite.flip_h = false
 			sprite.play("attack_right")
 		else:
 			sprite.flip_h = true
 			sprite.play("attack_right")
-
 	else:
-
 		sprite.flip_h = false
-
 		if facing_direction.y > 0:
 			sprite.play("attack_down")
 		else:
 			sprite.play("attack_up")
+
+	# Hitbox becomes active slightly after the animation starts
+	await get_tree().create_timer(0.08).timeout
+	$AttackArea.monitoring = true
+
+	# Hitbox only stays active briefly
+	await get_tree().create_timer(0.10).timeout
+	$AttackArea.monitoring = false
+
+	# Player regains control before the animation fully ends
+	await get_tree().create_timer(0.10).timeout
+	is_attacking = false
 
 
 func _on_attack_area_body_entered(body):
@@ -175,11 +192,7 @@ func _on_attack_area_body_entered(body):
 
 
 func _on_animated_sprite_2d_animation_finished():
-
-	$AttackArea.monitoring = false
-
-	if sprite.animation.begins_with("attack"):
-		is_attacking = false
+	pass
 
 
 func take_damage(amount):

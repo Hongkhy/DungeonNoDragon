@@ -225,7 +225,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f0fw1")
 }],
-"loop": 0,
+"loop": false,
 "name": &"attack_down",
 "speed": 5.0
 }, {
@@ -248,7 +248,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f3ls1")
 }],
-"loop": 0,
+"loop": false,
 "name": &"attack_right",
 "speed": 10.0
 }, {
@@ -271,7 +271,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qdokd")
 }],
-"loop": 0,
+"loop": false,
 "name": &"attack_up",
 "speed": 5.0
 }, {
@@ -288,7 +288,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_34o1q")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -302,7 +302,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o7uhf")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_right",
 "speed": 2.0
 }, {
@@ -319,7 +319,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ny12")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_up",
 "speed": 1.0
 }, {
@@ -348,7 +348,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qfkas")
 }],
-"loop": 0,
+"loop": false,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -377,7 +377,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mrmpe")
 }],
-"loop": 0,
+"loop": false,
 "name": &"walk_right",
 "speed": 5.0
 }, {
@@ -406,7 +406,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7jscb")
 }],
-"loop": 0,
+"loop": false,
 "name": &"walk_up",
 "speed": 5.0
 }]
@@ -427,7 +427,6 @@ collision_layer = 3
 collision_mask = 9
 script = ExtResource("1_jvee6")
 speed = 150.0
-max_health = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=705300148]
 position = Vector2(-7.1525574e-07, 0)
@@ -455,10 +454,11 @@ shape = SubResource("CircleShape2D_jvee6")
 debug_color = Color(0.47449356, 0.58953834, 9.62615e-07, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1274455751]
-zoom = Vector2(5, 5)
+zoom = Vector2(2, 2)
 limit_enabled = false
 limit_smoothed = true
 position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

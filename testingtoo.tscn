@@ -1,10 +1,9 @@
 [gd_scene format=4 uid="uid://nuh3y7cqqjre"]
 
 [ext_resource type="Texture2D" uid="uid://ds2a6lq15ryhu" path="res://Scence/Map/Cave/Dungeon_Tileset.png" id="1_bkc3c"]
-[ext_resource type="PackedScene" uid="uid://maa2ga4hx13d" path="res://Scence/Mobs/Groudon/groudon.tscn" id="3_bkc3c"]
+[ext_resource type="PackedScene" uid="uid://maa2ga4hx13d" path="res://Scence/mobs/Groudon/groudon.tscn" id="3_bkc3c"]
 [ext_resource type="PackedScene" uid="uid://bxxafky7foiem" path="res://Scence/player/player.tscn" id="3_hcpxe"]
-[ext_resource type="PackedScene" uid="uid://cmu4dj04dm12p" path="res://Scence/Interactive/HP bar.tscn" id="4_4b5mw"]
-[ext_resource type="PackedScene" uid="uid://bi5ht1rfs2vy6" path="res://Scence/Mobs/Vampier/vampire.tscn" id="5_hcpxe"]
+[ext_resource type="PackedScene" uid="uid://cmu4dj04dm12p" path="res://Scence/interactive/HP bar.tscn" id="4_4b5mw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dvy0"]
 texture = ExtResource("1_bkc3c")
@@ -127,6 +126,3 @@ position = Vector2(168, 200)
 position = Vector2(441, 276)
 
 [node name="HPBar" parent="." unique_id=1142752405 instance=ExtResource("4_4b5mw")]
-
-[node name="Vampire" parent="." unique_id=1705892000 instance=ExtResource("5_hcpxe")]
-position = Vector2(751, 55)

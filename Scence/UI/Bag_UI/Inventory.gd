@@ -6,10 +6,22 @@ var coins := 1000
 var hp_potions := 2
 var buff_potions := 2
 
+var hp_level := 0
+var damage_level := 0
+var speed_level := 0
+
 
 func add_coins(amount:int):
 	coins += amount
 	inventory_changed.emit()
+
+func spend_coins(amount: int) -> bool:
+	if coins < amount:
+		return false
+
+	coins -= amount
+	inventory_changed.emit()
+	return true
 
 
 func add_hp_potion(amount:int = 1):
