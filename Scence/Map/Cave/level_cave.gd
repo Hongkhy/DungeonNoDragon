@@ -52,6 +52,7 @@ const TILE_SIZE := 16
 var current_floor := 1
 var enemies_alive := 0
 
+
 var floor_cells: Array[Vector2i] = []
 var wall_cells: Array[Vector2i] = []
 var rooms = []
@@ -497,13 +498,10 @@ func enemy_defeated():
 
 		print("Dungeon Cleared!")
 
-		await get_tree().create_timer(2.0).timeout
-
-		get_tree().change_scene_to_file("res://Scence/Map/Spawn/hub.tscn")
+		$HUD.show_victory()
 
 		return
-
-	# Next Floor
+		# Next Floor
 
 	await get_tree().create_timer(1.0).timeout
 

@@ -33,13 +33,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q2ups")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 1.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctc6m"]
-size = Vector2(44, 20)
+[sub_resource type="CircleShape2D" id="CircleShape2D_nhati"]
+radius = 29.12044
 
 [node name="Shopkeeper" type="Area2D" unique_id=316036931 groups=["npc"]]
 script = ExtResource("1_nhati")
@@ -50,8 +50,7 @@ autoplay = "default"
 frame_progress = 0.6018522
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=81223935]
-position = Vector2(-12, 0)
-shape = SubResource("RectangleShape2D_ctc6m")
+shape = SubResource("CircleShape2D_nhati")
 
 [node name="Label" type="Label" parent="." unique_id=1416270629]
 offset_left = -7.0

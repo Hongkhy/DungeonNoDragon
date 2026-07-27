@@ -635,6 +635,7 @@ stream = ExtResource("10_q5no3")
 [node name="die" type="AudioStreamPlayer2D" parent="." unique_id=287227712]
 stream = ExtResource("11_3bb61")
 
+[connection signal="died" from="." to="." method="_on_died"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]

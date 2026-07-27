@@ -1,31 +1,44 @@
 [gd_scene format=3 uid="uid://clssq7j1af28y"]
 
 [ext_resource type="Script" uid="uid://b4gpov2oq03vi" path="res://Scence/UI/Upgrade_UI/upgrade_menu.gd" id="1_p748i"]
+[ext_resource type="Texture2D" uid="uid://w6mhn6fbt0ia" path="res://Scence/UI/Bag_UI/asset/background.png" id="2_xcgjm"]
+[ext_resource type="Texture2D" uid="uid://du5xmd7kh5wgd" path="res://Scence/UI/Bag_UI/asset/back.png" id="3_ox8dl"]
 
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=13256815]
 process_mode = 3
 script = ExtResource("1_p748i")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1131878200]
+offset_left = 421.0
+offset_top = -2.0
+offset_right = 1006.0
+offset_bottom = 745.0
+texture = ExtResource("2_xcgjm")
+
 [node name="Panel" type="Panel" parent="." unique_id=571864975]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 548.0
 offset_top = 160.0
-offset_right = 786.0
-offset_bottom = 460.0
+offset_right = 875.0
+offset_bottom = 563.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1399779343]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 9
+offset_left = 8.0
+offset_right = 317.0
+offset_bottom = 400.0
 
 [node name="TitleLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1231977931]
+modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 22
 text = "Upgrade Altar"
+horizontal_alignment = 1
 
 [node name="CoinLabel" type="Label" parent="Panel/VBoxContainer" unique_id=710669181]
+modulate = Color(0.8117647, 0.70980394, 0.23137255, 1)
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 22
 text = "Coin"
 
 [node name="HSeparator" type="Label" parent="Panel/VBoxContainer" unique_id=1026264302]
@@ -37,27 +50,27 @@ layout_mode = 2
 
 [node name="HPLabel" type="Label" parent="Panel/VBoxContainer/HPRow" unique_id=1611666263]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "❤️ HP"
 
 [node name="HSpacer" type="Label" parent="Panel/VBoxContainer/HPRow" unique_id=1489580512]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "               "
+theme_override_font_sizes/font_size = 20
+text = "                "
 
 [node name="HPLevelLabel" type="Label" parent="Panel/VBoxContainer/HPRow" unique_id=963315570]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Lv.0"
 
 [node name="HPCostLabel" type="Label" parent="Panel/VBoxContainer/HPRow" unique_id=954445595]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Cost:100"
 
 [node name="HPButton" type="Button" parent="Panel/VBoxContainer/HPRow" unique_id=1395328789]
 layout_mode = 2
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 20
 text = "[+]"
 alignment = 0
 
@@ -66,27 +79,27 @@ layout_mode = 2
 
 [node name="DamageLabel" type="Label" parent="Panel/VBoxContainer/DamageRow" unique_id=1424858788]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "⚔ Damage"
 
 [node name="HSpacer" type="Label" parent="Panel/VBoxContainer/DamageRow" unique_id=983496339]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
-text = "   "
+text = "      "
 
 [node name="DamageLevelLabel" type="Label" parent="Panel/VBoxContainer/DamageRow" unique_id=622578787]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Lv.0 "
 
 [node name="DamageCostLabel" type="Label" parent="Panel/VBoxContainer/DamageRow" unique_id=388129251]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Cost:100"
 
 [node name="DamageButton" type="Button" parent="Panel/VBoxContainer/DamageRow" unique_id=1514989062]
 layout_mode = 2
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 20
 text = "[+]"
 alignment = 0
 
@@ -95,38 +108,46 @@ layout_mode = 2
 
 [node name="SpeedLabel" type="Label" parent="Panel/VBoxContainer/SpeedRow" unique_id=2099643426]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "👟 Speed"
 
 [node name="HSpacer" type="Label" parent="Panel/VBoxContainer/SpeedRow" unique_id=1302798112]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "         "
+theme_override_font_sizes/font_size = 20
+text = "          "
 
 [node name="SpeedLevelLabel" type="Label" parent="Panel/VBoxContainer/SpeedRow" unique_id=709769677]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Lv.0"
 
 [node name="SpeedCostLabel" type="Label" parent="Panel/VBoxContainer/SpeedRow" unique_id=1891919576]
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Cost:100"
 
 [node name="SpeedButton" type="Button" parent="Panel/VBoxContainer/SpeedRow" unique_id=1430946827]
 layout_mode = 2
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 20
 text = "[+]"
 alignment = 0
 
 [node name="CloseButton" type="Button" parent="Panel" unique_id=1435911102]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 266.0
-offset_right = 177.0
-offset_bottom = 287.0
-theme_override_font_sizes/font_size = 9
-text = "Close"
+offset_left = 110.0
+offset_top = 404.0
+offset_right = 223.0
+offset_bottom = 443.0
+theme_override_font_sizes/font_size = 22
+
+[node name="TextureRect" type="TextureRect" parent="Panel/CloseButton" unique_id=1525460992]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 118.0
+offset_bottom = 42.0
+texture = ExtResource("3_ox8dl")
+expand_mode = 1
 
 [connection signal="pressed" from="Panel/VBoxContainer/HPRow/HPButton" to="." method="_on_hp_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/DamageRow/DamageButton" to="." method="_on_damage_button_pressed"]

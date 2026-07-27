@@ -176,8 +176,64 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_u7k7o")
 text = "Return Spawn"
 
+[node name="VictoryPanel" type="Label" parent="." unique_id=2088375387]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -11.5
+offset_right = 26.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="VictoryPanel" unique_id=619643718]
+layout_mode = 0
+offset_left = -46.0
+offset_top = -74.0
+offset_right = 201.5
+offset_bottom = 166.5
+texture = ExtResource("4_35g78")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VictoryPanel" unique_id=1489456522]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -23.0
+offset_right = 170.0
+offset_bottom = 122.0
+
+[node name="VictoryLabel" type="Label" parent="VictoryPanel/VBoxContainer" unique_id=1592322594]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.39215687, 0, 1)
+theme_override_fonts/font = ExtResource("3_hmymt")
+theme_override_font_sizes/font_size = 16
+text = "VICTORY!
+You Defeated the 
+Boss!"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="VictoryPanel/VBoxContainer" unique_id=958857318]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_hmymt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehj45")
+text = "Restart"
+
+[node name="HubButton" type="Button" parent="VictoryPanel/VBoxContainer" unique_id=444733403]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_hmymt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u7k7o")
+text = "Return Spawn"
+
 [connection signal="pressed" from="PausePanel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PausePanel/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PausePanel/VBoxContainer/HubButton" to="." method="_on_hub_button_pressed"]
 [connection signal="pressed" from="GameOverPanel/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="GameOverPanel/VBoxContainer/HubButton" to="." method="_on_hub_button_pressed"]
+[connection signal="pressed" from="VictoryPanel/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VictoryPanel/VBoxContainer/HubButton" to="." method="_on_hub_button_pressed"]

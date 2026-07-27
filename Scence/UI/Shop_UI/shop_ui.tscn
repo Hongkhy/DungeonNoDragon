@@ -130,6 +130,4 @@ offset_left = 96.0
 offset_top = 441.0
 offset_right = 483.0
 offset_bottom = 568.0
-offset_transform_enabled = true
-offset_transform_scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_pe6ds")

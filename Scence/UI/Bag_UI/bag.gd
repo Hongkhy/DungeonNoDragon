@@ -1,6 +1,4 @@
 extends CanvasLayer
-signal use_hp_potion
-signal use_buff_potion
 @onready var coin_amount = $Control/Coinslot/Amount
 
 @onready var hp_slot = $Control/GridContainer/HP_Potion
@@ -44,6 +42,7 @@ func close_bag():
 	get_tree().paused = false
 	visible = false
 
+
 func _on_hp_pressed():
 	selected_item = "hp"
 	item_name.text = "Health Potion"
@@ -58,16 +57,21 @@ func _on_buff_pressed():
 
 func _on_use_pressed():
 
+	var player = get_tree().get_first_node_in_group("player")
+
+	if player == null:
+		print("No player found!")
+		return
+
 	match selected_item:
 
 		"hp":
 			if Inventory.use_hp_potion():
-				emit_signal("use_hp_potion")
+				player.heal(50)
 
 		"buff":
 			if Inventory.use_buff_potion():
-				emit_signal("use_buff_potion")
-
+				player.apply_random_buff()
 
 	update_ui()
 
@@ -75,3 +79,10 @@ func _on_use_pressed():
 		use_button.hide()
 	elif selected_item == "buff" and Inventory.buff_potions <= 0:
 		use_button.hide()
+
+func _on_use_buff_potion() -> void:
+	pass # Replace with function body.
+
+
+func _on_use_hp_potion() -> void:
+	pass # Replace with function body.

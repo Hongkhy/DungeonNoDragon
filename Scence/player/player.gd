@@ -40,7 +40,13 @@ func apply_upgrades():
 
 	
 func _on_use_hp_potion():
+	print("Player received HP signal")
 	heal(50)
+
+func _on_use_buff_potion():
+	print("Player received Buff signal")
+	apply_random_buff()
+	
 func _physics_process(_delta):
 
 	if current_state == State.DEAD:
@@ -209,18 +215,17 @@ func take_damage(amount):
 	if health <= 0:
 		die()
 		
-func heal(amount:int):
-
-	if current_state == State.DEAD:
-		return
+func heal(amount: int):
+	print("heal() called")
+	print("Before HP:", health)
 
 	health = min(health + amount, max_health)
 
+	print("After HP:", health)
+
 	emit_signal("health_changed", health, max_health)
-
-	print("Player healed:", health)
-
 func apply_random_buff():
+	print("Player received buff potion")
 	var buff = randi_range(0, 2)
 
 	match buff:
