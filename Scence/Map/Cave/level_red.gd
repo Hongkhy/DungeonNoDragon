@@ -14,12 +14,12 @@ extends Node2D
 # ======================================================
 # MAP SETTINGS (Made Much Bigger!)
 # ======================================================
-@export var map_width := 120
-@export var map_height := 120
+@export var map_width := 70
+@export var map_height := 100
 
-@export var room_count := 30
-@export var room_min_size := 8
-@export var room_max_size := 18
+@export var room_count := 20
+@export var room_min_size := 7
+@export var room_max_size := 20
 
 @export var min_items := 8
 @export var max_items := 15

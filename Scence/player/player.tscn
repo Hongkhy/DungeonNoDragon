@@ -108,10 +108,6 @@ region = Rect2(48, 0, 48, 48)
 atlas = ExtResource("7_6ei1u")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yd22d"]
-atlas = ExtResource("8_oalxu")
-region = Rect2(0, 0, 48, 48)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_n13pg"]
 atlas = ExtResource("4_n13pg")
 region = Rect2(48, 0, 48, 48)
@@ -122,6 +118,10 @@ region = Rect2(192, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ny12"]
 atlas = ExtResource("4_n13pg")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd22d"]
+atlas = ExtResource("8_oalxu")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5am"]
@@ -308,6 +308,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_n13pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3tnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ny12")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_yd22d")
 }, {
 "duration": 1.0,
@@ -317,7 +326,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_b3tnb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2ny12")
+"texture": SubResource("AtlasTexture_n13pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3tnb")
 }],
 "loop": 1,
 "name": &"idle_up",
@@ -432,7 +444,7 @@ speed = 150.0
 position = Vector2(-7.1525574e-07, 0)
 scale = Vector2(0.5416666, 0.5833333)
 sprite_frames = SubResource("SpriteFrames_00vd6")
-animation = &"attack_down"
+animation = &"idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1297798204]
 shape = SubResource("CapsuleShape2D_allxc")
