@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://djy6kroy5e0xh" path="res://Scence/Interactive/red_portal.tscn" id="10_waf42"]
 [ext_resource type="Script" uid="uid://klrqq0kiclnw" path="res://Scence/Map/Spawn/enter_shop.gd" id="11_lcpjk"]
 [ext_resource type="Texture2D" uid="uid://b5i23gqop3xoi" path="res://Scence/UI/HUD/asset/thatsShop.png" id="12_1tqxo"]
+[ext_resource type="PackedScene" uid="uid://b7q2bjra8fam1" path="res://Scence/UI/Totarial/totaral.tscn" id="14_1d02u"]
 [ext_resource type="Texture2D" uid="uid://be0koc0x66pyb" path="res://Scence/UI/HUD/asset/Notshop.png" id="14_q1n8v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2euy"]
@@ -1709,5 +1710,7 @@ scale = Vector2(1, 1)
 position = Vector2(248.99998, 0)
 scale = Vector2(0.11169516, 0.12380192)
 texture = ExtResource("14_q1n8v")
+
+[node name="Totarial" parent="." unique_id=1024813356 instance=ExtResource("14_1d02u")]
 
 [connection signal="body_entered" from="EnterShop" to="player" method="_on_enter_shop_body_entered"]

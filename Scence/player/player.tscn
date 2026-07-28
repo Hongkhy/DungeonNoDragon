@@ -225,7 +225,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f0fw1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_down",
 "speed": 10.0
 }, {
@@ -248,7 +248,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f3ls1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_right",
 "speed": 10.0
 }, {
@@ -271,7 +271,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qdokd")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_up",
 "speed": 10.0
 }, {
@@ -288,7 +288,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_34o1q")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -302,7 +302,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o7uhf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_right",
 "speed": 2.0
 }, {
@@ -319,7 +319,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ny12")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up",
 "speed": 1.0
 }, {
@@ -348,7 +348,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qfkas")
 }],
-"loop": false,
+"loop": 0,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -377,7 +377,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mrmpe")
 }],
-"loop": false,
+"loop": 0,
 "name": &"walk_right",
 "speed": 5.0
 }, {
@@ -406,7 +406,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7jscb")
 }],
-"loop": false,
+"loop": 0,
 "name": &"walk_up",
 "speed": 5.0
 }]
@@ -452,7 +452,7 @@ shape = SubResource("CircleShape2D_jvee6")
 debug_color = Color(0.47449356, 0.58953834, 9.62615e-07, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1274455751]
-zoom = Vector2(2, 2)
+zoom = Vector2(4, 4)
 limit_enabled = false
 limit_smoothed = true
 position_smoothing_enabled = true
