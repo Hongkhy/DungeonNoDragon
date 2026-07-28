@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckt8u4evur8oy"
-path="res://.godot/imported/FireballAssets.png-a13d2ea131940ac0fec988da5ae6b9ab.ctex"
+path="res://.godot/imported/FireballAssets.png-d0b1bb3f6a6380702b36f203ea8366ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scence/attack/fireball/FireballAssets.png"
-dest_files=["res://.godot/imported/FireballAssets.png-a13d2ea131940ac0fec988da5ae6b9ab.ctex"]
+source_file="res://Scence/Attack/fireball/FireballAssets.png"
+dest_files=["res://.godot/imported/FireballAssets.png-d0b1bb3f6a6380702b36f203ea8366ea.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btld714ygsymy"
-path="res://.godot/imported/Shoot-Anim.png-0babb720e2991a883379b2fd676807ff.ctex"
+path="res://.godot/imported/Shoot-Anim.png-cc3b98114526202e587768cf27aae267.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scence/mobs/Groudon/asset/Shoot-Anim.png"
-dest_files=["res://.godot/imported/Shoot-Anim.png-0babb720e2991a883379b2fd676807ff.ctex"]
+source_file="res://Scence/Mobs/Groudon/asset/Shoot-Anim.png"
+dest_files=["res://.godot/imported/Shoot-Anim.png-cc3b98114526202e587768cf27aae267.ctex"]
 
 [params]
 

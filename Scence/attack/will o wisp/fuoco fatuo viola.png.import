@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blmofmbe1woml"
-path="res://.godot/imported/fuoco fatuo viola.png-4fce94a1f44097b1845984a15f2680e3.ctex"
+path="res://.godot/imported/fuoco fatuo viola.png-70126ea5c7739a1d5215393b5ef28a1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scence/attack/will o wisp/fuoco fatuo viola.png"
-dest_files=["res://.godot/imported/fuoco fatuo viola.png-4fce94a1f44097b1845984a15f2680e3.ctex"]
+source_file="res://Scence/Attack/will o wisp/fuoco fatuo viola.png"
+dest_files=["res://.godot/imported/fuoco fatuo viola.png-70126ea5c7739a1d5215393b5ef28a1a.ctex"]
 
 [params]
 

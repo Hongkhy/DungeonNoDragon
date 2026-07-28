@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://j2n4088xnxro"
-path="res://.godot/imported/screaming-scout.mp3-4688407006299a96e625392fb84421eb.mp3str"
+path="res://.godot/imported/screaming-scout.mp3-466e6a0d400d9c8c5e03592f7e9743e7.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Groudon/sound/screaming-scout.mp3"
-dest_files=["res://.godot/imported/screaming-scout.mp3-4688407006299a96e625392fb84421eb.mp3str"]
+source_file="res://Scence/Mobs/Groudon/sound/screaming-scout.mp3"
+dest_files=["res://.godot/imported/screaming-scout.mp3-466e6a0d400d9c8c5e03592f7e9743e7.mp3str"]
 
 [params]
 

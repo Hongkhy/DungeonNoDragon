@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dr8f22pufhp4b"
-path="res://.godot/imported/short-hawk-tuah.mp3-3fb4351ed1a4f1e52aa40b41502e1009.mp3str"
+path="res://.godot/imported/short-hawk-tuah.mp3-64affceb65eea4c0c4c029e707909063.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Vampier/sound/short-hawk-tuah.mp3"
-dest_files=["res://.godot/imported/short-hawk-tuah.mp3-3fb4351ed1a4f1e52aa40b41502e1009.mp3str"]
+source_file="res://Scence/Mobs/Vampier/sound/short-hawk-tuah.mp3"
+dest_files=["res://.godot/imported/short-hawk-tuah.mp3-64affceb65eea4c0c4c029e707909063.mp3str"]
 
 [params]
 

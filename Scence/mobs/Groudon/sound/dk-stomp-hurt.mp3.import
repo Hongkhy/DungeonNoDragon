@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bnwv8fbg27keg"
-path="res://.godot/imported/dk-stomp-hurt.mp3-37f0a6155e72fad4deb36fb5077d2823.mp3str"
+path="res://.godot/imported/dk-stomp-hurt.mp3-90f7a8b87af03699d0966c944325188d.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Groudon/sound/dk-stomp-hurt.mp3"
-dest_files=["res://.godot/imported/dk-stomp-hurt.mp3-37f0a6155e72fad4deb36fb5077d2823.mp3str"]
+source_file="res://Scence/Mobs/Groudon/sound/dk-stomp-hurt.mp3"
+dest_files=["res://.godot/imported/dk-stomp-hurt.mp3-90f7a8b87af03699d0966c944325188d.mp3str"]
 
 [params]
 

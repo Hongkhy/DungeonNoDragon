@@ -265,3 +265,11 @@ func _input(event):
 			Bag.close_bag()
 		else:
 			Bag.open_bag()
+
+
+func _on_enter_shop_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_enter_shop_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

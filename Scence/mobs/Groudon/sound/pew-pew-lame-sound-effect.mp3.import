@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bfh2s70sk3oeq"
-path="res://.godot/imported/pew-pew-lame-sound-effect.mp3-21475c33330113ac7c4e9c7bdb5d1fe7.mp3str"
+path="res://.godot/imported/pew-pew-lame-sound-effect.mp3-f219dd31740ee5448c8ffb18f941840d.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Groudon/sound/pew-pew-lame-sound-effect.mp3"
-dest_files=["res://.godot/imported/pew-pew-lame-sound-effect.mp3-21475c33330113ac7c4e9c7bdb5d1fe7.mp3str"]
+source_file="res://Scence/Mobs/Groudon/sound/pew-pew-lame-sound-effect.mp3"
+dest_files=["res://.godot/imported/pew-pew-lame-sound-effect.mp3-f219dd31740ee5448c8ffb18f941840d.mp3str"]
 
 [params]
 

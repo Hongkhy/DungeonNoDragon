@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c1j6eg3s7djx0"
-path="res://.godot/imported/old-sound-of-zombie-in-minecraft.mp3-9d85468c0f28f4067991decb2ab678f0.mp3str"
+path="res://.godot/imported/old-sound-of-zombie-in-minecraft.mp3-d27c3c8d7250bf6b80a7ab1c41cc25cd.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Zombie/sound/old-sound-of-zombie-in-minecraft.mp3"
-dest_files=["res://.godot/imported/old-sound-of-zombie-in-minecraft.mp3-9d85468c0f28f4067991decb2ab678f0.mp3str"]
+source_file="res://Scence/Mobs/Zombie/sound/old-sound-of-zombie-in-minecraft.mp3"
+dest_files=["res://.godot/imported/old-sound-of-zombie-in-minecraft.mp3-d27c3c8d7250bf6b80a7ab1c41cc25cd.mp3str"]
 
 [params]
 

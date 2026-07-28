@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://but1kvpve0u7n"
-path="res://.godot/imported/warden-take-damage.mp3-38cec1f410642e4179469b946ad63252.mp3str"
+path="res://.godot/imported/warden-take-damage.mp3-532193ea29bddfcf93b392086da7090f.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Zombie/sound/warden-take-damage.mp3"
-dest_files=["res://.godot/imported/warden-take-damage.mp3-38cec1f410642e4179469b946ad63252.mp3str"]
+source_file="res://Scence/Mobs/Zombie/sound/warden-take-damage.mp3"
+dest_files=["res://.godot/imported/warden-take-damage.mp3-532193ea29bddfcf93b392086da7090f.mp3str"]
 
 [params]
 

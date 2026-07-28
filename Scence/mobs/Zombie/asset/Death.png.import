@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjg3ryfne4ng0"
-path="res://.godot/imported/Death.png-4feb343952aa66e275140791dee36d90.ctex"
+path="res://.godot/imported/Death.png-0848cf409311af577d5a54a4c072656d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scence/mobs/Zombie/asset/Death.png"
-dest_files=["res://.godot/imported/Death.png-4feb343952aa66e275140791dee36d90.ctex"]
+source_file="res://Scence/Mobs/Zombie/asset/Death.png"
+dest_files=["res://.godot/imported/Death.png-0848cf409311af577d5a54a4c072656d.ctex"]
 
 [params]
 

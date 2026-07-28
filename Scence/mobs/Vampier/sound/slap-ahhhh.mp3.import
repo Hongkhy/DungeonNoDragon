@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dku8rb66wbrem"
-path="res://.godot/imported/slap-ahhhh.mp3-a0f152b7eed336e2b0edc376f081c49d.mp3str"
+path="res://.godot/imported/slap-ahhhh.mp3-eacbe2ff01b47b2e5f7752086f450f7f.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Vampier/sound/slap-ahhhh.mp3"
-dest_files=["res://.godot/imported/slap-ahhhh.mp3-a0f152b7eed336e2b0edc376f081c49d.mp3str"]
+source_file="res://Scence/Mobs/Vampier/sound/slap-ahhhh.mp3"
+dest_files=["res://.godot/imported/slap-ahhhh.mp3-eacbe2ff01b47b2e5f7752086f450f7f.mp3str"]
 
 [params]
 

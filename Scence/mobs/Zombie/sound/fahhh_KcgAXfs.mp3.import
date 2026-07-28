@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://2xfg200jo41o"
-path="res://.godot/imported/fahhh_KcgAXfs.mp3-f392917c84184ad66c0c1038c79faa68.mp3str"
+path="res://.godot/imported/fahhh_KcgAXfs.mp3-4e824340c6eeb2ae65e0504f884aff59.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Zombie/sound/fahhh_KcgAXfs.mp3"
-dest_files=["res://.godot/imported/fahhh_KcgAXfs.mp3-f392917c84184ad66c0c1038c79faa68.mp3str"]
+source_file="res://Scence/Mobs/Zombie/sound/fahhh_KcgAXfs.mp3"
+dest_files=["res://.godot/imported/fahhh_KcgAXfs.mp3-4e824340c6eeb2ae65e0504f884aff59.mp3str"]
 
 [params]
 

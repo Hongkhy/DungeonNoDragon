@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bagnnm7srdcb8"
-path="res://.godot/imported/godzilla-2014-roar.mp3-9fd398572c56ac3034bb902863bbedaa.mp3str"
+path="res://.godot/imported/godzilla-2014-roar.mp3-e7f84bcf31929e07ca0e99b24f37bac9.mp3str"
 
 [deps]
 
-source_file="res://Scence/mobs/Groudon/sound/godzilla-2014-roar.mp3"
-dest_files=["res://.godot/imported/godzilla-2014-roar.mp3-9fd398572c56ac3034bb902863bbedaa.mp3str"]
+source_file="res://Scence/Mobs/Groudon/sound/godzilla-2014-roar.mp3"
+dest_files=["res://.godot/imported/godzilla-2014-roar.mp3-e7f84bcf31929e07ca0e99b24f37bac9.mp3str"]
 
 [params]
 

@@ -1622,5 +1622,8 @@ shape = SubResource("RectangleShape2D_6sbhx")
 
 [node name="player" parent="." unique_id=1843001232 instance=ExtResource("3_fsllc")]
 position = Vector2(181, 142)
+scale = Vector2(1, 1)
 
 [node name="ShopUi" parent="." unique_id=2013894266 instance=ExtResource("4_fsllc")]
+scale = Vector2(0.75, 0.75)
+transform = Transform2D(0.75, 0, 0, 0.75, 0, 0)

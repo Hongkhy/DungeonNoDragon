@@ -79,11 +79,11 @@ texture = ExtResource("3_7gprc")
 
 [node name="PriceLabel" type="Label" parent="Control/HPPotion" unique_id=45151132]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 93.0
-offset_right = 85.0
-offset_bottom = 116.0
-text = "10000000"
+offset_left = 35.0
+offset_top = 92.0
+offset_right = 56.0
+offset_bottom = 115.0
+text = "50"
 
 [node name="NameLabel" type="Label" parent="Control/HPPotion" unique_id=1094897336]
 layout_mode = 0
@@ -110,24 +110,25 @@ texture = ExtResource("4_xd2de")
 
 [node name="PriceLabel" type="Label" parent="Control/BuffPotion" unique_id=2083430585]
 layout_mode = 0
-offset_left = -422.0
+offset_left = -398.0
 offset_top = -150.0
-offset_right = -348.0
+offset_right = -378.0
 offset_bottom = -127.0
-text = "10000000"
+text = "50"
 
 [node name="NameLabel" type="Label" parent="Control/BuffPotion" unique_id=978507395]
 layout_mode = 0
-offset_left = -412.0
-offset_top = -168.0
-offset_right = -357.0
-offset_bottom = -145.0
-text = "buffffff"
+offset_left = -432.0
+offset_top = -169.0
+offset_right = -345.0
+offset_bottom = -146.0
+text = "Buff Potion"
 
 [node name="Close" type="TextureButton" parent="Control" unique_id=1435552382]
 layout_mode = 0
-offset_left = 96.0
-offset_top = 441.0
-offset_right = 483.0
-offset_bottom = 568.0
+offset_left = 187.0
+offset_top = 463.0
+offset_right = 574.0
+offset_bottom = 590.0
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_pe6ds")
