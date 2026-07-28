@@ -1,62 +1,115 @@
 [gd_scene format=3 uid="uid://c38e5jfxibcco"]
 
-[ext_resource type="Texture2D" uid="uid://8hq888e74f5k" path="res://Asset/Anything/download.webp" id="1_suhhc"]
+[ext_resource type="Script" uid="uid://bxm5cvk4cfhyw" path="res://Scence/UI/Setting/setting.gd" id="1_o18sa"]
 [ext_resource type="FontFile" uid="uid://uibyu8giro0a" path="res://Asset/font/SoundWaveRacing-Regular.otf" id="2_6g2us"]
+[ext_resource type="VideoStream" uid="uid://dar1atmaab5dk" path="res://Scence/UI/Setting/download.ogv" id="2_o18sa"]
 [ext_resource type="AudioStream" uid="uid://dpoq5ta00nw76" path="res://Asset/BackgroundMusic/1-11. Dawn.mp3" id="3_r776u"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5t84w"]
-texture = ExtResource("1_suhhc")
-
-[node name="Setting" type="Control"]
+[node name="Credit" type="Control" unique_id=1524021301]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o18sa")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1843534771]
+layout_mode = 0
+offset_left = -587.0
+offset_top = -328.0
+offset_right = 584.0
+offset_bottom = 337.0
+stream = ExtResource("2_o18sa")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Credits" type="Control" parent="." unique_id=477611501]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Credits" unique_id=1609705170]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -332.0
+offset_right = 223.0
+offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_5t84w")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 343.0
-offset_top = 194.0
-offset_right = 787.0
-offset_bottom = 240.0
-theme_override_colors/font_color = Color(0.0019457941, 0.0019457941, 0.0019457941, 1)
-theme_override_fonts/font = ExtResource("2_6g2us")
-theme_override_font_sizes/font_size = 35
-text = "There is nothing here"
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 241.0
-offset_right = 1060.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0.0019457941, 0.0019457941, 0.0019457941, 1)
-theme_override_fonts/font = ExtResource("2_6g2us")
-theme_override_font_sizes/font_size = 35
-text = "What are you trying to change ? Sensitivity?"
-
-[node name="Label3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 188.0
-offset_top = 596.0
-offset_right = 951.0
-offset_bottom = 642.0
-theme_override_colors/font_color = Color(0.0019457941, 0.0019457941, 0.0019457941, 1)
+theme_override_colors/font_color = Color(0.59607846, 0.65882355, 1, 0.99607843)
+theme_override_colors/font_shadow_color = Color(5.968213e-06, 0.96714014, 0.7802193, 1)
+theme_override_colors/font_outline_color = Color(0.8150497, 0.3725488, 3.85046e-07, 1)
 theme_override_fonts/font = ExtResource("2_6g2us")
 theme_override_font_sizes/font_size = 20
-text = "Aslo I'm not giving you \"back\" button, you have restart the game"
+text = "Created By
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+Suntei Leang
+Hongkhy Kong
+
+
+Special Thanks
+
+Eavheng Hor
+For assisting with the Endless Mode."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Credits" unique_id=1752973657]
+layout_mode = 0
+offset_left = -289.0
+offset_top = 8.0
+offset_right = 336.0
+offset_bottom = 185.0
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0.59607846, 0.65882355, 1, 0.99607843)
+theme_override_colors/font_shadow_color = Color(5.968213e-06, 0.96714014, 0.7802193, 1)
+theme_override_colors/font_outline_color = Color(0.8150497, 0.3725488, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_6g2us")
+theme_override_font_sizes/font_size = 20
+text = "Asset Credits
+
+Many thanks to the talented creators who provided
+the pixel art, sprites, music, and sound effects
+used throughout the game.
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Credits" unique_id=697668050]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -244.0
+offset_top = 144.0
+offset_right = 240.0
+offset_bottom = 381.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.59607846, 0.65882355, 1, 0.99607843)
+theme_override_colors/font_shadow_color = Color(5.968213e-06, 0.96714014, 0.7802193, 1)
+theme_override_colors/font_outline_color = Color(0.8150497, 0.3725488, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_6g2us")
+theme_override_font_sizes/font_size = 20
+text = "Development Support
+
+Special thanks to ChatGPT (OpenAI)
+for programming assistance, debugging,
+and gameplay scripting support.
+
+
+Thank You for Playing!"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1704696670]
 stream = ExtResource("3_r776u")
 autoplay = true
